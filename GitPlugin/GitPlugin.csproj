@@ -76,6 +76,7 @@
     </Compile>
     <Compile Include="Commands\FindFile.cs" />
     <Compile Include="Commands\OpenWithDifftool.cs" />
+    <Compile Include="Commands\SvnFetch.cs" />
     <Compile Include="Commands\ViewChanges.cs">
       <SubType>Code</SubType>
     </Compile>
