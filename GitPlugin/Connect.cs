@@ -161,6 +161,11 @@ namespace GitPlugin
                     _gitPlugin.AddPopupCommand(mainMenuPopup, "CherryPick", "Cherry &pick", "Cherry pick commit", 15, n++);
                 }
 
+                // SVN integration commands
+                {
+                    _gitPlugin.AddPopupCommand(mainMenuPopup, "SVNFetch", "SVN Fetch", "Fetch from SVN repository", 0, n++, true);
+                }
+
                 {
                     _gitPlugin.AddPopupCommand(mainMenuPopup, "Bash", "&Git bash", "Start git bash", 21, n++, true);
                     _gitPlugin.AddPopupCommand(mainMenuPopup, "Settings", "Se&ttings", "Settings", 2, n++);
@@ -325,6 +330,7 @@ namespace GitPlugin
                 this._gitPlugin.RegisterCommand("GitIgnore", new ToolbarCommand<GitIgnore>());
                 this._gitPlugin.RegisterCommand("Remotes", new ToolbarCommand<Remotes>());
                 this._gitPlugin.RegisterCommand("FindFile", new ToolbarCommand<FindFile>());
+                this._gitPlugin.RegisterCommand("SVNFetch", new ToolbarCommand<SvnFetch>());
             }
             catch (Exception ex)
             {

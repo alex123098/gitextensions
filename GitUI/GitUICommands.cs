@@ -1931,6 +1931,9 @@ namespace GitUI
                 case "uninstall":
                     Uninstall();
                     return;
+                case "svn-fetch":
+                    StartSvnFetchDialog();
+                    return;
                 default:
                     if (args[1].StartsWith("git://") || args[1].StartsWith("http://") || args[1].StartsWith("https://"))
                     {
