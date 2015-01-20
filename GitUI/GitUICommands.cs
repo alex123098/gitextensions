@@ -1934,6 +1934,12 @@ namespace GitUI
                 case "svn-fetch":
                     StartSvnFetchDialog();
                     return;
+                case "svn-rebase":
+                    StartSvnRebaseDialog();
+                    return;
+                case "svn-dcommit":
+                    StartSvnDcommitDialog();
+                    return;
                 default:
                     if (args[1].StartsWith("git://") || args[1].StartsWith("http://") || args[1].StartsWith("https://"))
                     {
