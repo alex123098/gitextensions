@@ -164,6 +164,8 @@ namespace GitPlugin
                 // SVN integration commands
                 {
                     _gitPlugin.AddPopupCommand(mainMenuPopup, "SVNFetch", "SVN Fetch", "Fetch from SVN repository", 0, n++, true);
+                    _gitPlugin.AddPopupCommand(mainMenuPopup, "SVNRebase", "SVN Rebase", "Rebase with updates from SVN repository", 0, n++, true);
+                    _gitPlugin.AddPopupCommand(mainMenuPopup, "SVNDCommit", "SVN DCommit", "Send all local commits to SVN repository", 0, n++, true);
                 }
 
                 {
@@ -331,6 +333,8 @@ namespace GitPlugin
                 this._gitPlugin.RegisterCommand("Remotes", new ToolbarCommand<Remotes>());
                 this._gitPlugin.RegisterCommand("FindFile", new ToolbarCommand<FindFile>());
                 this._gitPlugin.RegisterCommand("SVNFetch", new ToolbarCommand<SvnFetch>());
+                this._gitPlugin.RegisterCommand("SVNRebase", new ToolbarCommand<SvnRebase>());
+                this._gitPlugin.RegisterCommand("SVNDCommit", new ToolbarCommand<SvnDCommit>());
             }
             catch (Exception ex)
             {
