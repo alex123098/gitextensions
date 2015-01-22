@@ -164,8 +164,8 @@ namespace GitPlugin
                 // SVN integration commands
                 {
                     _gitPlugin.AddPopupCommand(mainMenuPopup, "SVNFetch", "SVN Fetch", "Fetch from SVN repository", 0, n++, true);
-                    _gitPlugin.AddPopupCommand(mainMenuPopup, "SVNRebase", "SVN Rebase", "Rebase with updates from SVN repository", 0, n++, true);
-                    _gitPlugin.AddPopupCommand(mainMenuPopup, "SVNDCommit", "SVN DCommit", "Send all local commits to SVN repository", 0, n++, true);
+                    _gitPlugin.AddPopupCommand(mainMenuPopup, "SVNRebase", "SVN Rebase", "Rebase with updates from SVN repository", 0, n++);
+                    _gitPlugin.AddPopupCommand(mainMenuPopup, "SVNDCommit", "SVN DCommit", "Send all local commits to SVN repository", 0, n++);
                 }
 
                 {
