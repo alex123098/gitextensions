@@ -30,6 +30,7 @@ namespace GitUI.CommandsDialogs.CommitDialog
             _NO_TRANSLATE_numericMaxFirstLineLength.Value = AppSettings.CommitValidationMaxCntCharsFirstLine;
             _NO_TRANSLATE_numericMaxLineLength.Value = AppSettings.CommitValidationMaxCntCharsPerLine;
             checkBoxSecondLineEmpty.Checked = AppSettings.CommitValidationSecondLineMustBeEmpty;
+            checkBoxMakeSecondLineEmpty.Checked = AppSettings.CommitMakeSecondLineEmpty;
             checkBoxUseIndent.Checked = AppSettings.CommitValidationIndentAfterFirstLine;
             _NO_TRANSLATE_textBoxCommitValidationRegex.Text = AppSettings.CommitValidationRegEx;
 
@@ -60,6 +61,7 @@ namespace GitUI.CommandsDialogs.CommitDialog
             AppSettings.CommitValidationMaxCntCharsFirstLine = Convert.ToInt32(_NO_TRANSLATE_numericMaxFirstLineLength.Value);
             AppSettings.CommitValidationMaxCntCharsPerLine = Convert.ToInt32(_NO_TRANSLATE_numericMaxLineLength.Value);
             AppSettings.CommitValidationSecondLineMustBeEmpty = checkBoxSecondLineEmpty.Checked;
+            AppSettings.CommitMakeSecondLineEmpty = checkBoxMakeSecondLineEmpty.Checked;
             AppSettings.CommitValidationIndentAfterFirstLine = checkBoxUseIndent.Checked;
             AppSettings.CommitValidationRegEx = _NO_TRANSLATE_textBoxCommitValidationRegex.Text;
 

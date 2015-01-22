@@ -1545,6 +1545,8 @@ namespace GitUI.CommandsDialogs
             //Save last commit message in settings. This way it can be used in multiple repositories.
             AppSettings.LastCommitMessage = commitMessageText;
 
+            bool makeSecondLineEmpty = AppSettings.CommitMakeSecondLineEmpty;
+
             var path = Path.Combine(Module.GetGitDirectory(), "COMMITMESSAGE");
 
             //Commit messages are UTF-8 by default unless otherwise in the config file.
@@ -1565,7 +1567,7 @@ namespace GitUI.CommandsDialogs
                     if (!line.StartsWith("#") ||
                         string.IsNullOrEmpty(_commitTemplate))
                     {
-                        if (lineNumber == 1 && !String.IsNullOrEmpty(line))
+                        if (lineNumber == 1 && makeSecondLineEmpty && !String.IsNullOrEmpty(line))
                             textWriter.WriteLine();
 
                         textWriter.WriteLine(line);
