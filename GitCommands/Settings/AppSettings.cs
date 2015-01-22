@@ -1021,6 +1021,12 @@ namespace GitCommands
             set { SetBool("CommitValidationSecondLineMustBeEmpty", value); }
         }
 
+        public static bool CommitMakeSecondLineEmpty
+        {
+            get { return GetBool("CommitMakeSecondLineEmpty", true); }
+            set { SetBool("CommitMakeSecondLineEmpty", value); }
+        }
+
         public static bool CommitValidationIndentAfterFirstLine
         {
             get { return GetBool("CommitValidationIndentAfterFirstLine", true); }
